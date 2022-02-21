@@ -33,6 +33,8 @@ public class Main {
                     continue;
                 case 0:
                     stop = 0;
+                    break;
+                default:
             }
         }
     }
@@ -62,38 +64,37 @@ public class Main {
     }
 
     static void printList() {
-        int itemNum = 1;
         if (!todo.isEmpty()) {
-            for (int i = 0; i < todo.size(); i++) {
-                System.out.println(itemNum + "." + todo.get(i));
-                itemNum++;
+            for (int itemNum = 0; itemNum < todo.size(); itemNum++) {
+                System.out.println(itemNum + 1 + "." + todo.get(itemNum));
             }
         } else System.out.println("Список задач пуст");
     }
+}
 
-//    static void printList(){
+//static void printList(){
 //        int itemNum = 1;
-//        if (!todo.isEmpty()) {
-//            for (Iterator<String> iter = todo.iterator(); iter.hasNext(); ) {
+//        if (!t0odo.isEmpty()) {
+//            for (Iterator<String> iter = to0do.iterator(); iter.hasNext(); ) {
 //                System.out.println(itemNum + "." + iter.next());
 //                itemNum++;
 //            }
 //        } else System.out.println("Список задач пуст");
 //    }
-
+//
 //    static void printList() {
 //        int itemNum = 1;
-//        Iterator<String> iterator = todo.iterator();
+//        Iterator<String> iterator = t0odo.iterator();
 //        while (iterator.hasNext()){
 //            System.out.println(itemNum + "." + iterator.next());
 //            itemNum++;
 //        }
 //    }
-
+//
 //    static void printList() {
 //        int i = 1;
-//        if (!todo.isEmpty()){
-//            for (String s : todo) {
+//        if (!t0odo.isEmpty()){
+//            for (String s : t0odo) {
 //                System.out.println(i + "." + s);
 //                i++;
 //            }
@@ -101,4 +102,4 @@ public class Main {
 //        } else System.out.println("Список задач пуст");
 //    }
 
-}
+
