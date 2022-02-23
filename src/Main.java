@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import static java.lang.System.*;
 
 public class Main {
-    static Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(in);
     static List<String> todo = new ArrayList<>();
 
     public static void main(String[] args) {
@@ -12,7 +13,7 @@ public class Main {
             menu();
             switch (input()) {
                 case 1:
-                    System.out.println("Введите задачу для планирования:");
+                    out.println("Введите задачу для планирования:");
                     todo.add(scanner.nextLine());
                     break;
                 case 2:
@@ -20,14 +21,14 @@ public class Main {
                     break;
                 case 3:
                     if (!todo.isEmpty()) {
-                        System.out.println("Введите номер задачи для удаления:");
+                        out.println("Введите номер задачи для удаления:");
                         try {
                             todo.remove(input() - 1);
                             printList();
                         } catch (IndexOutOfBoundsException err) {
-                            System.out.println("Нет такой задачи, повторите");
+                            out.println("Нет такой задачи, повторите");
                         }
-                    } else System.out.println("Список задач пуст");
+                    } else out.println("Список задач пуст");
                     break;
                 case 4:
                     continue;
@@ -41,7 +42,7 @@ public class Main {
 
 
     static void menu() {
-        System.out.println("Выберите действие:\n" +
+        out.println("Выберите действие:\n" +
                 "1. Добавить задачу\n" +
                 "2. Вывести спиок задач\n" +
                 "3. Удалить задачу\n" +
@@ -58,7 +59,7 @@ public class Main {
                 return err;
             }
         } catch (NumberFormatException e) {
-            System.out.println("Вы ввели не число, повторите");
+            out.println("Вы ввели не число, повторите");
         }
         return err;
     }
@@ -66,9 +67,9 @@ public class Main {
     static void printList() {
         if (!todo.isEmpty()) {
             for (int itemNum = 0; itemNum < todo.size(); itemNum++) {
-                System.out.println(itemNum + 1 + "." + todo.get(itemNum));
+                out.println(itemNum + 1 + "." + todo.get(itemNum));
             }
-        } else System.out.println("Список задач пуст");
+        } else out.println("Список задач пуст");
     }
 }
 
