@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import static java.lang.System.*;
+
+import static java.lang.System.in;
+import static java.lang.System.out;
 
 public class Main {
     static Scanner scanner = new Scanner(in);
@@ -28,7 +30,7 @@ public class Main {
                         } catch (IndexOutOfBoundsException err) {
                             out.println("Нет такой задачи, повторите");
                         }
-                    } else out.println("Список задач пуст");
+                    } else out.println("Список задач пуст ");
                     break;
                 case 4:
                     continue;
